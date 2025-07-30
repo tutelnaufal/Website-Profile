@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Admin</title>
+  <link rel="stylesheet" href="style.css"> <!-- opsional -->
+</head>
+<body>
+  <h2>Login Admin</h2>
+
+  <?php if (isset($_GET['error'])): ?>
+    <p style="color: red;">Username atau Password salah!</p>
+  <?php endif; ?>
+
+  <form action="login.php" method="POST">
+    <label>Username:</label><br>
+    <input type="text" name="username" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>
